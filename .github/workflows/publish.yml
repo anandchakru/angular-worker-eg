@@ -1,0 +1,36 @@
+name: Node CI
+on: 
+  push:
+    branches:
+      - master
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [10.x]
+    steps:
+    - uses: actions/checkout@v1
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v1
+      with:
+        node-version: ${{ matrix.node-version }}
+    - name: Dependencies
+      run: |
+        npm i --if-present
+    - name: Meta
+      run: |
+        npm run meta
+    - name: Build
+      run: |
+        npm run build
+    - name: Deploy
+      uses: crazy-max/ghaction-github-pages@v1.2.2
+      if: success()
+      with:
+        build_dir: ./dist/rathnas
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        GITHUB_PAT: ${{ secrets.GITHUB_PAT }}
+        CI: true
+        fqdn: rathnas.com
