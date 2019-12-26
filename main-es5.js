@@ -51,7 +51,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "<p>Data: {{ hashd?.data }}</p>\n<p>MD5: {{ hashd?.md5 }}</p>";
+    __webpack_exports__["default"] = "<p>Data: {{ hashd?.data }}</p>\n<p>MD5: {{ hashd?.md5 }}</p>\n\n<div class=\"version\">\n  Version: <strong>{{bi?.hash?.short}}</strong>\n</div>";
     /***/
   },
 
@@ -643,7 +643,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2FwcC5jb21wb25lbnQuc2NzcyJ9 */";
+    __webpack_exports__["default"] = ".version {\n  position: absolute;\n  bottom: 10px;\n  right: 10px;\n  color: #aaa;\n  font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif;\n  font-size: 10px;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL3J1bm5lci93b3JrL2FuZ3VsYXItd29ya2VyLWVnL2FuZ3VsYXItd29ya2VyLWVnL3NyYy9hcHAvYXBwLmNvbXBvbmVudC5zY3NzIiwic3JjL2FwcC9hcHAuY29tcG9uZW50LnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSxrQkFBQTtFQUNBLFlBQUE7RUFDQSxXQUFBO0VBQ0EsV0FBQTtFQUNBLHdJQUFBO0VBQ0EsZUFBQTtBQ0NGIiwiZmlsZSI6InNyYy9hcHAvYXBwLmNvbXBvbmVudC5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLnZlcnNpb24ge1xuICBwb3NpdGlvbjogYWJzb2x1dGU7XG4gIGJvdHRvbTogMTBweDtcbiAgcmlnaHQ6IDEwcHg7XG4gIGNvbG9yOiAjYWFhO1xuICBmb250LWZhbWlseTogLWFwcGxlLXN5c3RlbSwgQmxpbmtNYWNTeXN0ZW1Gb250LCAnU2Vnb2UgVUknLCBSb2JvdG8sIE94eWdlbiwgVWJ1bnR1LCBDYW50YXJlbGwsICdPcGVuIFNhbnMnLCAnSGVsdmV0aWNhIE5ldWUnLCBzYW5zLXNlcmlmO1xuICBmb250LXNpemU6IDEwcHg7XG59IiwiLnZlcnNpb24ge1xuICBwb3NpdGlvbjogYWJzb2x1dGU7XG4gIGJvdHRvbTogMTBweDtcbiAgcmlnaHQ6IDEwcHg7XG4gIGNvbG9yOiAjYWFhO1xuICBmb250LWZhbWlseTogLWFwcGxlLXN5c3RlbSwgQmxpbmtNYWNTeXN0ZW1Gb250LCBcIlNlZ29lIFVJXCIsIFJvYm90bywgT3h5Z2VuLCBVYnVudHUsIENhbnRhcmVsbCwgXCJPcGVuIFNhbnNcIiwgXCJIZWx2ZXRpY2EgTmV1ZVwiLCBzYW5zLXNlcmlmO1xuICBmb250LXNpemU6IDEwcHg7XG59Il19 */";
     /***/
   },
 
@@ -680,6 +680,12 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
       /*! @angular/core */
       "./node_modules/@angular/core/fesm2015/core.js");
+      /* harmony import */
+
+
+      var _environments_meta__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+      /*! ../environments/meta */
+      "./src/environments/meta.ts");
 
       var AppComponent =
       /*#__PURE__*/
@@ -687,6 +693,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
         function AppComponent() {
           _classCallCheck(this, AppComponent);
 
+          this.bi = _environments_meta__WEBPACK_IMPORTED_MODULE_2__["BUILDINFO"];
           this.DATA = 'Message to be hashed';
         }
 
@@ -828,6 +835,48 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
      * on performance if an error is thrown.
      */
     // import 'zone.js/dist/zone-error';  // Included with Angular CLI.
+
+    /***/
+  },
+
+  /***/
+  "./src/environments/meta.ts":
+  /*!**********************************!*\
+    !*** ./src/environments/meta.ts ***!
+    \**********************************/
+
+  /*! exports provided: BUILDINFO */
+
+  /***/
+  function srcEnvironmentsMetaTs(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "BUILDINFO", function () {
+      return BUILDINFO;
+    });
+    /* harmony import */
+
+
+    var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+    /*! tslib */
+    "./node_modules/tslib/tslib.es6.js"); // IMPORTANT: THIS FILE IS AUTO GENERATED! DO NOT MANUALLY EDIT OR CHECKIN!
+
+    /* tslint:disable */
+
+
+    var BUILDINFO = {
+      "hash": {
+        "short": "e10b60d",
+        "long": "e10b60d9b1c2e511ffa1eacdfa21b2b04be3783c"
+      },
+      "tag": "",
+      "package": "0.0.0"
+    };
+    /* tslint:enable */
 
     /***/
   },
