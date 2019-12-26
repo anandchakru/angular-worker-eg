@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
+  DATA = 'Message to be hashed';
   hashd;
   private worker: Worker;
   ngOnInit() {
@@ -14,7 +15,12 @@ export class AppComponent implements OnInit {
       this.worker.onmessage = (event) => {
         this.hashd = event.data;
       }
-      this.worker.postMessage('Message to be hashed');
+      this.worker.postMessage(this.DATA);
+    } else {
+      this.hashd = {
+        data: this.DATA,
+        md5: 'webworker unsupported browser'
+      };
     }
   }
 }
