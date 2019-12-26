@@ -28,9 +28,8 @@ jobs:
       uses: crazy-max/ghaction-github-pages@v1.2.2
       if: success()
       with:
-        build_dir: ./dist/rathnas
+        build_dir: ./dist/wt
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         GITHUB_PAT: ${{ secrets.GITHUB_PAT }}
         CI: true
-        fqdn: rathnas.com
