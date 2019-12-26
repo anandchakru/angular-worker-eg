@@ -870,8 +870,8 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
     var BUILDINFO = {
       "hash": {
-        "short": "e10b60d",
-        "long": "e10b60d9b1c2e511ffa1eacdfa21b2b04be3783c"
+        "short": "2f52c88",
+        "long": "2f52c881d6aaa3904d02b80882ba09c4764d1383"
       },
       "tag": "",
       "package": "0.0.0"
