@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { BUILDINFO } from '../environments/meta';
 
 @Component({
   selector: 'app-root',
@@ -6,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
+  bi = BUILDINFO;
   DATA = 'Message to be hashed';
   hashd;
   private worker: Worker;
